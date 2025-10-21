@@ -1,7 +1,7 @@
 const users = localStorage.getItem("users") || "[]";
 
-function getAllContacts() {
-  return localStorage.getItem("contacts") || "[]";
+function getAllContacts(username) {
+  return localStorage.getItem(username) || "[]";
 }
 
 function getAllUsers() {
@@ -9,10 +9,10 @@ function getAllUsers() {
 }
 
 //contact = object
-function insertContact(contact) {
-  const contacts = JSON.parse(getAllContacts());
+function insertContact(contact, username) {
+  const contacts = JSON.parse(getAllContacts(username));
   contacts.push(contact);
-  localStorage.setItem("contacts", JSON.stringify(contacts));
+  localStorage.setItem(username, JSON.stringify(contacts));
 }
 
 function insertUser(username) {
@@ -31,8 +31,8 @@ function getUser(username) {
   return -1;
 }
 
-function getContact(name) {
-  const contacts = JSON.parse(getAllContacts());
+function getContact(name, username) {
+  const contacts = JSON.parse(getAllContacts(username));
   for (let i = 0; i < contacts.length; i++) {
     if (contacts[i].name === name) {
       return contacts[i];

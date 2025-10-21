@@ -1,13 +1,19 @@
-function navigate(page){
-    const content= document.getElementById("content");
-    const template=document.getElementById(page);
-    const clone=template.content.cloneNode(true);
-    content.innerHTML='';
-    content.appendChild(clone);
-    if((page=='signup') || (page== 'login')){
-        content.className='enter';
-    }else{
-        content.className=page;
-    }
+function navigate(page) {
+  const content = document.getElementById("content");
+  const template = document.getElementById(page);
+  const clone = template.content.cloneNode(true);
+  content.innerHTML = "";
+  content.appendChild(clone);
+  if (page === "signup" || page === "login") {
+    content.className = "enter";
+  } else {
+    content.className = page;
+  }
+  if (page === "login") {
+    checkLogin();
+  }
+  if (page === "signup") {
+    checkSignUp();
+  }
 }
-navigate('login');
+navigate("login");

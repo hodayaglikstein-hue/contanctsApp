@@ -1,4 +1,4 @@
-
+function buildApp(){
 const table = document.getElementById('people');
 
 function createTable(){  
@@ -29,4 +29,5 @@ function addContacts(username) {
         }
         table.appendChild(tr)
     }
+}
 }

@@ -8,6 +8,7 @@ function navigate(page) {
     content.className = "enter";
   } else {
     content.className = page;
+    buildApp();
   }
   if (page === "login") {
     checkLogin();

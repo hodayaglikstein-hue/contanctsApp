@@ -9,6 +9,7 @@ function navigate(page) {
   } else {
     content.className = page;
     buildApp();
+    return;
   }
   if (page === "login") {
     checkLogin();

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="content"></div>
+
+      <template  id="login">
+        <form class="form">
+          <div class="form-part" id="title">Login</div>
+          <div class="form-part">
+            <label for="username">Username:</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="form-part">
+            <label for="password">Password:</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+          </div>
+          <button id="reset" type="reset">Reset</button>
+          <button id="submit" type="button">Login</button>
+
+          <div id="account" class="form-part">
+            <a onclick="navigate('signup')"
+              >Haven't got an account yet? Sign up here</a
+            >
+          </div>
+        </form>
+      </template>
+
+      <template id="signup">
+        <form class="form">
+          <div class="form-part" id="title">Sign Up</div>
+          <div class="form-part">
+            <label for="username">Username:</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="form-part">
+            <label for="password">Password:</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              minlength="4"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="form-part">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              minlength="4"
+              maxlength="20"
+              required
+            />
+          </div>
+          <button id="reset" type="reset">Reset</button>
+          <button id="submit" type="button">Register</button>
+        </form>
+      </template>
+      <template id=""></template>
+    </main>
+    <script src="./js/spa.js"></script>
+    <!-- <script src="./js/login.js"></script> -->
+  </body>
+</html>

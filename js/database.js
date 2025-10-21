@@ -15,9 +15,9 @@ function insertContact(contact, username) {
   localStorage.setItem(username, JSON.stringify(contacts));
 }
 
-function insertUser(username) {
+function insertUser(user) {
   const users = JSON.parse(getAllUsers());
-  users.push(username);
+  users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
 }
 

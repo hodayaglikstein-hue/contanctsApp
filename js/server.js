@@ -10,3 +10,7 @@ function checkIfUserExist(username, password) {
 }
 
 function checkIfContactExist() {}
+
+function allContacts(username) {
+  return getAllContacts(username);
+}

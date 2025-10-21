@@ -17,3 +17,4 @@ function navigate(page) {
   }
 }
 navigate("login");
+// navigate("app");

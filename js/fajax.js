@@ -30,8 +30,9 @@ class Fajax {
 
   send(data = {}) {
     this.data = data;
-    const res = response(this.request);
-    this._onload(res);
+    let answer = network(this.request);
+    // const res = response(this.request);
+    this._onload(answer);
   }
 }
 const fajax = new Fajax();

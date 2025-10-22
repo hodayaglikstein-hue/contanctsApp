@@ -1,3 +1,6 @@
+
+
+
 function checkIfUserExist(username, password) {
   if (getUser(username) === -1) {
     return false;

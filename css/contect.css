@@ -18,17 +18,28 @@
   order: 2;
   font-weight: 300;
 }
-
-#content.app #btnAdd {
-  order: 3;
+#content.app #click {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  margin: 10px;
+}
+#content.app #add {
+  order: 3;
   background-color: rgb(189, 255, 189);
   padding: 15px;
 }
-#content.app #name {
+#content.app .logout {
   order: 4;
+  /* position: absolute; */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  background-color: rgb(189, 255, 189);
+  padding: 15px;
+}
+
+#content.app #name {
+  order: 5;
   margin-left: auto;
   font-weight: 500;
   font-size: 20px;

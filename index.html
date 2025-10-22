@@ -100,15 +100,19 @@
         <nav class="navbar">
           <img id="imgpeople" width="50px" src="https://www.gstatic.com/images/branding/product/1x/contacts_2022_48dp.png" /></a>
           <h1 id="title">Contacts</h1>
-          <button id="btnAdd">Add Contact</button>
-          <p id="name"></p>
+          <div id="click">
+            <button id="add">Add Contact</button>
+          <button class="logout">logout</button>
+          </div>
+          
+            <P id="name"></P>
+           </div>
         </nav>
         <div id="divtab">
           <table id="people"></table>
         </div>
         
         <table id="people"></table>
-        <h4 id="add">Add Contact</h4>
       </template>
       <template id="addContact">
         <h1>Add a new contact</h1>
@@ -147,7 +151,6 @@
             maxlength="10"
             required
             >
-            <!-- <input type="submit" id="addNew" value="Add contact"> -->
             <button id="addNew" type="button">add contact</button>
 
         </form>

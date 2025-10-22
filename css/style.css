@@ -24,11 +24,10 @@
 #content.enter .form {
   background: white;
   padding: 30px;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  border: 2px solid;
   width: 520px;
 }
 
@@ -54,8 +53,20 @@
   margin: 5px;
   font-size: 25px;
 }
+#content.enter #submit1 {
+  background-color: rgb(186, 244, 240);
+  padding: 5px;
+  margin: 5px;
+  font-size: 25px;
+}
 
 #content.enter #reset {
+  background-color: rgb(117, 239, 231);
+  padding: 5px;
+  margin: 5px;
+  font-size: 25px;
+}
+#content.enter #reset1 {
   background-color: rgb(117, 239, 231);
   padding: 5px;
   margin: 5px;
@@ -65,4 +76,8 @@
 #content.enter #account {
   text-align: center;
   font-size: 25px;
+}
+#content.enter a {
+  text-decoration: underline blue;
+  color: blue;
 }

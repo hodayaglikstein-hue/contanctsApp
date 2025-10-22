@@ -18,7 +18,7 @@ function checkSignUp() {
       updateUserDatabase(user);
       sessionStorage.setItem("nameShow", "" + user.username);
       alert("User registered successfully!");
-      navigate("app");
+      navigate("login");
     } else {
       alert("Username already exist");
     }

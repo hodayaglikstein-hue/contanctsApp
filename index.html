@@ -101,7 +101,49 @@
           <p id="name">Hello, </p>
         </nav>
         <table id="people"></table>
-        <button>Add Contact</button>
+        <h4 id="add">Add Contact</h4>
+      </template>
+      <template id="addContact">
+        <h1>Add a new contact</h1>
+        <form>
+            <label for="firstname">First Name:</label>
+            <input 
+            type="text" 
+            name="firstname" 
+            id="firstname" 
+            minlength="2" 
+            maxlength="20"
+            required
+            >
+            <label for="lastname">Last Name:</label>
+            <input 
+            type="text" 
+            name="lastname" 
+            id="lastname" 
+            minlength="2" 
+            maxlength="20"
+            required
+            >
+            <label for="email">Email:</label>
+            <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            required
+            >
+            <label for="phonenumber">Phone:</label>
+            <input 
+            type="tel" 
+            name="phonenumber" 
+            id="phonenumber" 
+            minlength="10" 
+            maxlength="10"
+            required
+            >
+            <!-- <input type="submit" id="addNew" value="Add contact"> -->
+            <button id="addNew" type="button">add contact</button>
+
+        </form>
       </template>
     </main>
     <script src="./js/spa.js"></script>
@@ -110,5 +152,6 @@
     <script src="./js/server.js"></script>
     <script src="./js/signup.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/addContact.js"></script>
   </body>
 </html>

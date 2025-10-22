@@ -1,10 +1,11 @@
-function network(request){
-    setTimeout(function(request){
+function network(request, callback){
+    setTimeout(function(){
       const random = Math.random();
     if(random<0.1){
-        return console.log("error");
+        callback (console.log("error"))
+
     }else{
-        return request;
+         callback(response(request))
     }  
     }, 3000)
     

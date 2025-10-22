@@ -21,21 +21,18 @@ function buildApp() {
     }
     table.appendChild(tr);
     const username = sessionStorage.getItem("nameShow");
-    addContacts(username);
+    const fajax = new Fajax();
+    fajax.onload(function (array) {
+      addContacts(array);
+    });
+    fajax.open("GET", "contacts");
+    fajax.send();
   }
   createTable();
 
-  const fajax = new Fajax();
-  let contacts;
-  fajax.onload(function () {
-    contacts = addContacts(username);
-  });
-  fajax.open("GET", "contacts");
-  fajax.send();
-
-  function addContacts(username) {
+  function addContacts(contactsArray) {
     console.log("Im in");
-    contacts = JSON.parse(contacts);
+    const contacts = JSON.parse(contactsArray);
     for (let i = 0; i < contacts.length; i++) {
       const tr = document.createElement("tr");
       const values = Object.values(contacts[i]);
@@ -47,4 +44,12 @@ function buildApp() {
       table.appendChild(tr);
     }
   }
+
+  // const fajax = new Fajax();
+  // fajax.onload(function (m) {
+  //   console.log(m);
+  //   // console.log(JSON.parse(m));
+  // });
+  // fajax.open("GET", "contacts");
+  // fajax.send();
 }

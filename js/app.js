@@ -1,6 +1,7 @@
 function buildApp() {
   nameShow = document.getElementById("name");
   console.log(nameShow);
+  let contacts;
 
   nameShow.innerHTML = sessionStorage.getItem("nameShow");
   const table = document.getElementById("people");
@@ -21,19 +22,19 @@ function buildApp() {
     }
     table.appendChild(tr);
     const username = sessionStorage.getItem("nameShow");
-    addContacts(username);
-  }
-  createTable();
+      const fajax = new Fajax();
 
-  const fajax = new Fajax();
-  let contacts;
-  fajax.onload(function () {
-    contacts = addContacts(username);
+  fajax.onload(function (array) {
+    addContacts( array);
   });
   fajax.open("GET", "contacts");
   fajax.send();
+  }
+  createTable();
 
-  function addContacts(username) {
+
+
+  function addContacts(contacts) {
     console.log("Im in");
     contacts = JSON.parse(contacts);
     for (let i = 0; i < contacts.length; i++) {

@@ -10,6 +10,7 @@ class Fajax {
         this.request.method = "POST";
         break;
       case "GET":
+        console.log("1")
         this.request.method = "GET";
         break;
       case "UPDATE":
@@ -29,6 +30,7 @@ class Fajax {
   }
 
   send(data = {}) {
+    console.log("get")
     this.data = data;
     network(this.request, (answer) => {
       if (answer === null) {
@@ -39,9 +41,9 @@ class Fajax {
     });
   }
 }
-const fajax = new Fajax();
-fajax.onload(function (m) {
-  console.log(JSON.parse(m)[0].username);
-});
-fajax.open("GET", "users");
-fajax.send();
+// const fajax = new Fajax();
+// fajax.onload(function (m) {
+//   console.log(JSON.parse(m)[0].username);
+// });
+// fajax.open("GET", "users");
+// fajax.send();

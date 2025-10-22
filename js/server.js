@@ -13,8 +13,8 @@ function response(request) {
       }
       if (request.url.startsWith("contacts")) {
         let arr = request.url.match(/\d+/g);
-        if (arr[0] === "") {
-          allContacts(sessionStorage.getItem("nameShow"));
+        if (!arr) {
+          return allContacts(sessionStorage.getItem("nameShow"));
         } else {
           let id = Number(arr[0]);
           return getContactById(id);

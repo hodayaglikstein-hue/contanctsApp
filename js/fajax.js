@@ -30,13 +30,14 @@ class Fajax {
 
   send(data = {}) {
     this.data = data;
-    network(this.request,  (answer) => {
-    if (answer === null) {
-      console.error("Error");
-    } else {
-      this._onload(answer);
-    }});
-  } 
+    network(this.request, (answer) => {
+      if (answer === null) {
+        console.error("Error");
+      } else {
+        this._onload(answer);
+      }
+    });
+  }
 }
 const fajax = new Fajax();
 fajax.onload(function (m) {

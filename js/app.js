@@ -25,9 +25,17 @@ function buildApp() {
   }
   createTable();
 
+  const fajax = new Fajax();
+  let contacts;
+  fajax.onload(function () {
+    contacts = addContacts(username);
+  });
+  fajax.open("GET", "contacts");
+  fajax.send();
+
   function addContacts(username) {
     console.log("Im in");
-    const contacts = JSON.parse(allContacts(username));
+    contacts = JSON.parse(contacts);
     for (let i = 0; i < contacts.length; i++) {
       const tr = document.createElement("tr");
       const values = Object.values(contacts[i]);

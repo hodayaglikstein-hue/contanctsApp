@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Fjalla+One&family=Heebo:wght@100..900&family=Poiret+One&family=Secular+One&family=Sora:wght@100..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Sora;
 }
 
 #content.enter {
@@ -11,12 +14,12 @@
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 #content.enter #title {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -39,12 +42,14 @@
 }
 
 #content.enter.form-part label {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 25px;
 }
 
 #content.enter input {
   padding: 5px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 #content.enter #submit {
@@ -52,12 +57,14 @@
   padding: 5px;
   margin: 5px;
   font-size: 25px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.431);
 }
 #content.enter #submit1 {
   background-color: rgb(186, 244, 240);
   padding: 5px;
   margin: 5px;
   font-size: 25px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.431);
 }
 
 #content.enter #reset {
@@ -65,12 +72,14 @@
   padding: 5px;
   margin: 5px;
   font-size: 25px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.431);
 }
 #content.enter #reset1 {
   background-color: rgb(117, 239, 231);
   padding: 5px;
   margin: 5px;
   font-size: 25px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.431);
 }
 
 #content.enter #account {

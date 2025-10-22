@@ -1,4 +1,10 @@
+
+
 function buildApp() {
+  nameShow = document.getElementById("name");
+console.log(nameShow);
+
+nameShow.innerHTML = sessionStorage.getItem("nameShow");
   const table = document.getElementById("people");
 
   function createTable() {

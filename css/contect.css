@@ -1,0 +1,62 @@
+#content.app {
+  width: 100vw;
+}
+#content.app .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 10px 10px;
+}
+
+#content.app #imgpeople {
+  order: 1;
+}
+
+#content.app #title {
+  order: 2;
+  font-weight: 300;
+}
+
+#content.app #btnAdd {
+  order: 3;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(189, 255, 189);
+  padding: 15px;
+}
+#content.app #name {
+  order: 4;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#content.app #divtab {
+  margin: 0;
+  font-size: 16px;
+  width: 100vw;
+  font-weight: 300;
+  font-size: 20px;
+}
+#content.app #people {
+  width: 100vw;
+}
+
+#content.app #divtab thead {
+  background-color: #f0f0f0;
+  font-size: 20px;
+}
+
+#content.app #divtab th,
+#content.app #divtab td {
+  padding: 12px 15px;
+  margin: 0;
+  width: 20%;
+}
+
+#content.app #divtab tr:hover {
+  background-color: #e0f7fa;
+}

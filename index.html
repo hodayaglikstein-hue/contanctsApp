@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/contect.css" />
+
   </head>
   <body>
     <main>
@@ -95,13 +97,16 @@
         </form>
       </template>
       <template id="app">
-        <nav>
-          <img id="imgpeople" width="50px" /></a>
-          <h1 id="title">Contect</h1>
-          <p id="name">Hello, </p>
+        <nav class="navbar">
+          <img id="imgpeople" width="50px" src="https://www.gstatic.com/images/branding/product/1x/contacts_2022_48dp.png" /></a>
+          <h1 id="title">Contacts</h1>
+          <button id="btnAdd">Add Contact</button>
+          <p id="name"></p>
         </nav>
-        <table id="people"></table>
-        <button>Add Contact</button>
+        <div id="divtab">
+          <table id="people"></table>
+        </div>
+        
       </template>
     </main>
     <script src="./js/spa.js"></script>

@@ -31,6 +31,20 @@ function getUser(username) {
   return -1;
 }
 
+function getUserById(id) {
+  const users = JSON.parse(getAllUsers());
+  let user = user[id - 1];
+  return user;
+}
+
+function getContactById(id) {
+  const contacts = JSON.parse(
+    getAllContacts(sessionStorage.getItem("nameShow"))
+  );
+  let contact = contacts[id - 1];
+  return contact;
+}
+
 function getContact(name, username) {
   const contacts = JSON.parse(getAllContacts(username));
   for (let i = 0; i < contacts.length; i++) {

@@ -14,11 +14,14 @@ function checkSignUp() {
       alert("please enter username and password");
       return false;
     }
+    //save all users
+    //find user id
     if (!checkIfUserExist(userName, password)) {
       const user = {
         username: userName,
         password: password,
       };
+      //
       updateUserDatabase(user);
       sessionStorage.setItem("nameShow", "" + user.username);
       alert("User registered successfully!");

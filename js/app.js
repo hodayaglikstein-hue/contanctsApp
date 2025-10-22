@@ -1,10 +1,8 @@
-
-
 function buildApp() {
   nameShow = document.getElementById("name");
-console.log(nameShow);
+  console.log(nameShow);
 
-nameShow.innerHTML = sessionStorage.getItem("nameShow");
+  nameShow.innerHTML = sessionStorage.getItem("nameShow");
   const table = document.getElementById("people");
   const add = document.getElementById("add");
   console.log(add);
@@ -14,7 +12,6 @@ nameShow.innerHTML = sessionStorage.getItem("nameShow");
 
   function createTable() {
     table.innerHTML = "";
-    table.style.border = "1 solid black";
     const arr1 = ["Name", "Family Name", "Email", "Phone Number"];
     const tr = document.createElement("tr");
     for (let i = 0; i < arr1.length; i++) {
@@ -34,10 +31,8 @@ nameShow.innerHTML = sessionStorage.getItem("nameShow");
     for (let i = 0; i < contacts.length; i++) {
       const tr = document.createElement("tr");
       const values = Object.values(contacts[i]);
-      //   console.log(values);
       for (let j = 0; j < values.length; j++) {
         const th = document.createElement("th");
-        // console.log(values[i]);
         th.innerHTML = values[j];
         tr.appendChild(th);
       }

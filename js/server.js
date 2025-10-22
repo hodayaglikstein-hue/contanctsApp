@@ -13,7 +13,10 @@ function updateUserDatabase(user) {
   insertUser(user);
 }
 
-function checkIfContactExist() {}
+function newContact(contact) {
+  console.log("Im here");
+  insertContact(contact, sessionStorage.getItem("nameShow"));
+}
 
 function allContacts(username) {
   return getAllContacts(username);

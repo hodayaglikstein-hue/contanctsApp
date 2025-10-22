@@ -6,6 +6,11 @@ console.log(nameShow);
 
 nameShow.innerHTML = sessionStorage.getItem("nameShow");
   const table = document.getElementById("people");
+  const add = document.getElementById("add");
+  console.log(add);
+  add.addEventListener("click", function () {
+    navigate("addContact");
+  });
 
   function createTable() {
     table.innerHTML = "";

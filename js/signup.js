@@ -10,6 +10,10 @@ function checkSignUp() {
       alert("the passwords aren't the same");
       return false;
     }
+    if (userName === "" || password === "") {
+      alert("please enter username and password");
+      return false;
+    }
     if (!checkIfUserExist(userName, password)) {
       const user = {
         username: userName,

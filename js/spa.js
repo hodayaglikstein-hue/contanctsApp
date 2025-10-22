@@ -8,7 +8,7 @@ function navigate(page) {
     content.className = "enter";
   } else {
     content.className = page;
-    // buildApp();
+    buildApp();
     return;
   }
 

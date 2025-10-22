@@ -16,7 +16,7 @@ function checkSignUp() {
         password: password,
       };
       updateUserDatabase(user);
-      sessionStorage.setItem("nameShow", " " + user.username);
+      sessionStorage.setItem("nameShow", "" + user.username);
       alert("User registered successfully!");
       navigate("app");
     } else {

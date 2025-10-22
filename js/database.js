@@ -46,13 +46,13 @@ function getContact(name, username) {
 // }
 
 // let c = {
-//   id: 2,
 //   name: "bob",
-//   email: "",
+//   lm: "bobi",
+//   email: "bla@gmail.com",
 //   phoneNum: "0528317658",
 // };
 
-// insertContact(c);
+// insertContact(c, "bla");
 // console.log(JSON.parse(getAllContacts()));
 // let cc = getContact("bob");
 // console.log(cc);

@@ -1,11 +1,11 @@
-function buildApp(){
-const table = document.getElementById('people');
+function buildApp() {
+  const table = document.getElementById("people");
 
-function createTable(){  
-    table.innerHTML = ""; 
-    table.style.border= "1 solid black";
-    const arr1=['Name','Family Name', 'Email', 'Phone Number'];
-    const tr = document.createElement("tr")
+  function createTable() {
+    table.innerHTML = "";
+    table.style.border = "1 solid black";
+    const arr1 = ["Name", "Family Name", "Email", "Phone Number"];
+    const tr = document.createElement("tr");
     for (let i = 0; i < arr1.length; i++) {
       const th = document.createElement("th");
       th.innerHTML = arr1[i];
@@ -19,16 +19,18 @@ function createTable(){
 
   function addContacts(username) {
     console.log("Im in");
-    const contacts = allContacts(username);
+    const contacts = JSON.parse(allContacts(username));
     for (let i = 0; i < contacts.length; i++) {
       const tr = document.createElement("tr");
       const values = Object.values(contacts[i]);
-      for (let j = 0; j < values; j++) {
+      //   console.log(values);
+      for (let j = 0; j < values.length; j++) {
         const th = document.createElement("th");
-        th.innerHTML = arr1[i];
+        // console.log(values[i]);
+        th.innerHTML = values[j];
         tr.appendChild(th);
       }
       table.appendChild(tr);
     }
-}
+  }
 }

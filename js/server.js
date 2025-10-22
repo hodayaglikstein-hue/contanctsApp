@@ -1,4 +1,5 @@
 // console.log(response({ method: "GET", url: "users" }));
+// response(network(this.request));
 function response(request) {
   switch (request.method) {
     case "GET":

@@ -1,6 +1,7 @@
 class Fajax {
   constructor() {
     this.request = {};
+    this._onload = "";
   }
 
   open(method, url) {
@@ -23,19 +24,19 @@ class Fajax {
     this.request.url = url;
   }
 
+  onload(callback) {
+    this._onload = callback;
+  }
+
   send(data = {}) {
     this.data = data;
     const res = response(this.request);
+    this._onload(res);
   }
 }
 const fajax = new Fajax();
-fajax.onload = function (response) {
-  if (this.status === 200) {
-    console.log("y");
-  } else {
-    console.log("g");
-  }
-};
+fajax.onload(function (m) {
+  console.log(JSON.parse(m)[0].username);
+});
 fajax.open("GET", "users");
 fajax.send();
-console.log(res);

@@ -1,5 +1,3 @@
-const users = localStorage.getItem("users") || "[]";
-
 function getAllContacts(username) {
   return localStorage.getItem(username) || "[]";
 }
@@ -8,7 +6,6 @@ function getAllUsers() {
   return localStorage.getItem("users") || "[]";
 }
 
-//contact = object
 function insertContact(contact, username) {
   const contacts = JSON.parse(getAllContacts(username));
   contacts.push(contact);
@@ -33,7 +30,7 @@ function getUser(username) {
 
 function getUserById(id) {
   const users = JSON.parse(getAllUsers());
-  let user = user[id - 1];
+  let user = users[id - 1];
   return user;
 }
 
@@ -56,11 +53,8 @@ function getContact(name, username) {
 }
 
 function deleteContact(contactId) {
-  console.log(getAllContacts(sessionStorage.getItem("nameShow")));
-  console.log(contactId + " hello");
   let contacts = [];
   contacts = JSON.parse(getAllContacts(sessionStorage.getItem("nameShow")));
-  console.log(contacts);
   contacts.splice(contactId - 1, 1);
   localStorage.setItem(
     sessionStorage.getItem("nameShow"),

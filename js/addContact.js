@@ -48,8 +48,8 @@ function addContact() {
         phone: phone,
       };
       const fajax = new Fajax();
-      fajax.onload(function (m) {
-        console.log(m);
+      fajax.onload(function (contacts) {
+        console.log(contacts);
       });
       fajax.open("POST", "contacts");
       fajax.send(contact);

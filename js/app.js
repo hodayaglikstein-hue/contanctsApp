@@ -48,11 +48,11 @@ function buildApp() {
         deleteFromContacts(this.id);
       });
       for (let j = 0; j < values.length; j++) {
-        const th = document.createElement("th");
-        th.innerHTML = values[j];
-        tr.appendChild(th);
+        const td = document.createElement("td");
+        td.innerHTML = values[j];
+        tr.appendChild(td);
       }
-      const thButton = document.createElement("th");
+      const thButton = document.createElement("td");
       thButton.appendChild(deleteButton);
       tr.appendChild(thButton);
       table.appendChild(tr);

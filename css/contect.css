@@ -78,3 +78,7 @@
 #content.app #divtab tr:hover {
   background-color: #e0f7fa;
 }
+
+td {
+  text-align: center;
+}

@@ -47,6 +47,22 @@ function response(request) {
       if (request.type === "users") {
       }
       if (request.type === "contacts") {
+        if (request.url.startsWith("contacts")) {
+          let arr = request.url.match(/\d+/g);
+          if (!arr) {
+            return "ERROR";
+          } else {
+            let id = Number(arr[0]);
+            //give id for each delete (starting from 0) and then get the
+            // id from the delete and delete the contact with the same id
+
+            //OR
+            //get the array of the button (with the same class which I will add in js)
+            //and then just delete the contact with the same id
+          }
+        } else {
+          return "ERROR";
+        }
       } else {
         return "ERROR";
       }

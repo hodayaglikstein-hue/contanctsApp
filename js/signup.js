@@ -14,8 +14,17 @@ function checkSignUp() {
       alert("please enter username and password");
       return false;
     }
-    //save all users
-    //find user id
+    if (
+      userName.length < 3 ||
+      userName.length > 20 ||
+      password.length < 4 ||
+      password.length > 8
+    ) {
+      alert(
+        "The length of the username need to be between 3 to 20 characters and the length of the password need to be between 3 to 8 characters"
+      );
+      return false;
+    }
 
     const fajax = new Fajax();
     fajax.onload(function (users) {

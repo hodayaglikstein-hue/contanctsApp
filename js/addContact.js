@@ -1,4 +1,8 @@
 function addContact() {
+  const logo = document.getElementById("imgpeople");
+  logo.addEventListener("click", function () {
+    navigate("app");
+  });
   const add = document.getElementById("addNew");
   add.addEventListener("click", addNewContact);
   function addNewContact() {

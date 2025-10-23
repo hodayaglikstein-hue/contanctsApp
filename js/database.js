@@ -55,6 +55,12 @@ function getContact(name, username) {
   return -1;
 }
 
+function deleteContact(contactId) {
+  let contacts = [];
+  contacts = getAllContacts(sessionStorage.getItem("nameShow"));
+  contacts.splice(contactId - 1, contactId - 1);
+}
+
 // function updateContact(name, edit) {
 
 // }

@@ -16,8 +16,12 @@ function addContact() {
         email: email,
         phone: phone,
       };
-
-      newContact(contact);
+      const fajax = new Fajax();
+      fajax.onload(function (m) {
+        console.log(m);
+      });
+      fajax.open("POST", "contacts");
+      fajax.send(contact);
       navigate("app");
     }
   }

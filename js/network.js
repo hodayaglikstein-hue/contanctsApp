@@ -6,5 +6,5 @@ function network(request, callback) {
     } else {
       callback(response(request));
     }
-  }, 3000);
+  }, 2000);
 }

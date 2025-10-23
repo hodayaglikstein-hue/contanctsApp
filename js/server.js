@@ -29,6 +29,8 @@ function response(request) {
         return true;
       }
       if (request.url.startsWith("contacts")) {
+        console.log(request);
+        console.log(request.data);
         newContact(request.data);
         return true;
       } else {
@@ -57,16 +59,16 @@ function response(request) {
   // prosses the request
 }
 
-function checkIfUserExist(username, password) {
-  if (getUser(username) === -1) {
-    return false;
-  }
-  const user = getUser(username);
-  if (user.password != password) {
-    return false;
-  }
-  return true;
-}
+// function checkIfUserExist(username, password) {
+//   if (getUser(username) === -1) {
+//     return false;
+//   }
+//   const user = getUser(username);
+//   if (user.password != password) {
+//     return false;
+//   }
+//   return true;
+// }
 
 function updateUserDatabase(user) {
   insertUser(user);

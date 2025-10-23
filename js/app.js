@@ -1,12 +1,10 @@
 function buildApp() {
   nameShow = document.getElementById("name");
-  console.log(nameShow);
   let contacts;
 
   nameShow.innerHTML = sessionStorage.getItem("nameShow");
   const table = document.getElementById("people");
   const add = document.getElementById("add");
-  console.log(add);
   add.addEventListener("click", function () {
     navigate("addContact");
   });
@@ -32,10 +30,11 @@ function buildApp() {
   createTable();
 
   function addContacts(contactsArray) {
-    console.log("Im in");
     const contacts = JSON.parse(contactsArray);
     for (let i = 0; i < contacts.length; i++) {
+      console.log(contacts);
       const tr = document.createElement("tr");
+      console.log(contacts[i]);
       const values = Object.values(contacts[i]);
       for (let j = 0; j < values.length; j++) {
         const th = document.createElement("th");

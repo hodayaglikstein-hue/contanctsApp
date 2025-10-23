@@ -39,9 +39,3 @@ class Fajax {
     });
   }
 }
-// const fajax = new Fajax();
-// fajax.onload(function (m) {
-//   console.log(JSON.parse(m)[0].username);
-// });
-// fajax.open("GET", "users");
-// fajax.send();

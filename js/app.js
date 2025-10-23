@@ -5,15 +5,15 @@ function buildApp() {
   nameShow.innerHTML = sessionStorage.getItem("nameShow");
   const table = document.getElementById("people");
   const add = document.getElementById("add");
+  const logout = document.getElementById("logoutid");
   add.addEventListener("click", function () {
     navigate("addContact");
-  logout.addEventListener("click", function(){
-    sessionStorage.clear();
-    nameShow.innerHTML =("");
-
-    navigate("logout");
-  })
-  });
+ });
+logout.addEventListener("click", function(){
+  sessionStorage.clear();
+  nameShow.innerHTML =("");
+    navigate("login");
+});
 
   function createTable() {
     table.innerHTML = "";

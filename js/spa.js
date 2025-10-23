@@ -30,14 +30,42 @@ function navigate(page) {
     function check() {
       const userName = document.getElementById("username").value;
       const password = document.getElementById("password").value;
-      if (checkIfUserExist(userName, password)) {
-        alert("Logged in successfully");
-        sessionStorage.setItem("nameShow", "" + userName);
-        navigate("app");
-        return;
+      const fajax = new Fajax();
+      fajax.open("GET", "users");
+      fajax.send();
+      fajax.onload(function (users) {
+        const usersArray = JSON.parse(users);
+        console.log(findUser(usersArray));
+        findUser(usersArray);
+        if (findUser(usersArray) === true) {
+          console.log("trueX3");
+          alert("Logged in successfully");
+          sessionStorage.setItem("nameShow", "" + userName);
+          navigate("app");
+          return;
+        } else {
+          alert("Incorrect");
+        }
+      });
+
+      function findUser(users) {
+        for (let i = 0; i < users.length; i++) {
+          if (users[i].username === userName) {
+            if ((users[i].password = password)) {
+              return true;
+            }
+          }
+        }
       }
 
-      alert("Incorrect");
+      //   if (checkIfUserExist(userName, password)) {
+      //     alert("Logged in successfully");
+      //     sessionStorage.setItem("nameShow", "" + userName);
+      //     navigate("app");
+      //     return;
+      //   }
+
+      //   alert("Incorrect");
     }
   }
 }

@@ -29,8 +29,6 @@ function response(request) {
         return true;
       }
       if (request.url.startsWith("contacts")) {
-        console.log(request);
-        console.log(request.data);
         newContact(request.data);
         return true;
       } else {
@@ -75,7 +73,6 @@ function updateUserDatabase(user) {
 }
 
 function newContact(contact) {
-  console.log("Im here");
   insertContact(contact, sessionStorage.getItem("nameShow"));
 }
 

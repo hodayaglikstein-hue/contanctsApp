@@ -58,3 +58,4 @@ function navigate(page) {
     }
   }
 }
+navigate("login")

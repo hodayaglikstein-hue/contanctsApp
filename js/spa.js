@@ -35,10 +35,8 @@ function navigate(page) {
       fajax.send();
       fajax.onload(function (users) {
         const usersArray = JSON.parse(users);
-        console.log(findUser(usersArray));
         findUser(usersArray);
         if (findUser(usersArray) === true) {
-          console.log("trueX3");
           alert("Logged in successfully");
           sessionStorage.setItem("nameShow", "" + userName);
           navigate("app");
@@ -57,34 +55,6 @@ function navigate(page) {
           }
         }
       }
-
-      //   if (checkIfUserExist(userName, password)) {
-      //     alert("Logged in successfully");
-      //     sessionStorage.setItem("nameShow", "" + userName);
-      //     navigate("app");
-      //     return;
-      //   }
-
-      //   alert("Incorrect");
     }
   }
 }
-navigate("login");
-// navigate("app");
-// function checkLogin() {
-//   const button = document.getElementById("submit1");
-//   button.addEventListener("click", check);
-
-//   function check() {
-//     const userName = document.getElementById("username").value;
-//     const password = document.getElementById("password").value;
-//     if (checkIfUserExist(userName, password)) {
-//       alert("Logged in successfully");
-//       sessionStorage.setItem("nameShow", " " + userName);
-//       navigate("app");
-//       return;
-//     }
-
-//     alert("Incorrect");
-//   }
-// }

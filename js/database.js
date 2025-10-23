@@ -67,19 +67,3 @@ function deleteContact(contactId) {
     JSON.stringify(contacts)
   );
 }
-
-// function updateContact(name, edit) {
-
-// }
-
-// let c = {
-//   name: "bob",
-//   lm: "bobi",
-//   email: "bla@gmail.com",
-//   phoneNum: "0528317658",
-// };
-
-// insertContact(c, "bla");
-// console.log(JSON.parse(getAllContacts()));
-// let cc = getContact("bob");
-// console.log(cc);

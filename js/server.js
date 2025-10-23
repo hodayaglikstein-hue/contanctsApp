@@ -1,4 +1,3 @@
-// console.log(response({ method: "GET", url: "users" }));
 function response(request) {
   switch (request.method) {
     case "GET":
@@ -60,19 +59,7 @@ function response(request) {
     default:
       "ERROR";
   }
-  // prosses the request
 }
-
-// function checkIfUserExist(username, password) {
-//   if (getUser(username) === -1) {
-//     return false;
-//   }
-//   const user = getUser(username);
-//   if (user.password != password) {
-//     return false;
-//   }
-//   return true;
-// }
 
 function updateUserDatabase(user) {
   insertUser(user);

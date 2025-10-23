@@ -68,11 +68,3 @@ function buildApp() {
     fajax.send();
   }
 }
-
-// const fajax = new Fajax();
-// fajax.onload(function (m) {
-//   console.log(m);
-//   // console.log(JSON.parse(m));
-// });
-// fajax.open("GET", "contacts");
-// fajax.send();

@@ -5,13 +5,13 @@ function addContact() {
   logo.addEventListener("click", function () {
     navigate("app");
   });
-    const logout = document.getElementById("logouti");
+  const logout = document.getElementById("logouti");
 
-  logout.addEventListener("click", function(){
-  sessionStorage.clear();
-  nameShow.innerHTML =("");
+  logout.addEventListener("click", function () {
+    sessionStorage.clear();
+    nameShow.innerHTML = "";
     navigate("login");
-});
+  });
   const add = document.getElementById("addNew");
   add.addEventListener("click", addNewContact);
   function addNewContact() {
@@ -19,6 +19,8 @@ function addContact() {
     const lastname = document.getElementById("lastname").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phonenumber").value;
+    const regex = /^[^@]+@[^@]+\.[^@]+$/;
+    const regex2 = /^[A-Za-z]+$/;
 
     if (firstname === "" || lastname === "" || email === "" || phone === "") {
       alert("please fill everything");
@@ -29,22 +31,29 @@ function addContact() {
       firstname.length > 20 ||
       lastname.length < 3 ||
       lastname.length > 20 ||
-      phone.length != 10
+      phone.length != 10 ||
+      !regex.test(email)
     ) {
       alert("Something is worng");
+      return;
     }
-    const contact = {
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      phone: phone,
-    };
-    const fajax = new Fajax();
-    fajax.onload(function (m) {
-      console.log(m);
-    });
-    fajax.open("POST", "contacts");
-    fajax.send(contact);
-    navigate("app");
+    if (!regex.test(firstname) || !regex.test(lastname)) {
+      alert("The firstname and lastname can only contain letters ");
+      return;
+    } else {
+      const contact = {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        phone: phone,
+      };
+      const fajax = new Fajax();
+      fajax.onload(function (m) {
+        console.log(m);
+      });
+      fajax.open("POST", "contacts");
+      fajax.send(contact);
+      navigate("app");
+    }
   }
 }

@@ -6,6 +6,7 @@ function checkSignUp() {
     const userName = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
+    const regex = /^[A-Za-z]+$/;
     if (password !== confirmPassword) {
       alert("the passwords aren't the same");
       return false;
@@ -24,6 +25,9 @@ function checkSignUp() {
         "The length of the username need to be between 3 to 20 characters and the length of the password need to be between 3 to 8 characters"
       );
       return false;
+    }
+    if (!regex.test(userName)) {
+      alert("The username can only contain letters ");
     }
 
     const fajax = new Fajax();
@@ -57,30 +61,5 @@ function checkSignUp() {
         }
       }
     }
-
-    // function checkIfUserExist(username, password) {
-    //   if (getUser(username) === -1) {
-    //     return false;
-    //   }
-    //   const user = getUser(username);
-    //   if (user.password != password) {
-    //     return false;
-    //   }
-    //   return true;
-    // }
-
-    // if (!checkIfUserExist(userName, password)) {
-    //   //   const user = {
-    //   //     username: userName,
-    //   //     password: password,
-    //   //   };
-    //   //   //
-    //   //   updateUserDatabase(user);
-    //   //   sessionStorage.setItem("nameShow", "" + user.username);
-    //   //   alert("User registered successfully!");
-    //   //   navigate("login");
-    // } else {
-    //   alert("Username already exist");
-    // }
   }
 }

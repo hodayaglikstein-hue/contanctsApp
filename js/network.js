@@ -2,7 +2,7 @@ function network(request, callback) {
   setTimeout(function () {
     const random = Math.random();
     if (random < 0.1) {
-      callback(console.log("error"));
+      callback(alert("Network Error"));
     } else {
       callback(response(request));
     }

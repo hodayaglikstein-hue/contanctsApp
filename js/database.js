@@ -56,9 +56,16 @@ function getContact(name, username) {
 }
 
 function deleteContact(contactId) {
+  console.log(getAllContacts(sessionStorage.getItem("nameShow")));
+  console.log(contactId + " hello");
   let contacts = [];
-  contacts = getAllContacts(sessionStorage.getItem("nameShow"));
-  contacts.splice(contactId - 1, contactId - 1);
+  contacts = JSON.parse(getAllContacts(sessionStorage.getItem("nameShow")));
+  console.log(contacts);
+  contacts.splice(contactId - 1, 1);
+  localStorage.setItem(
+    sessionStorage.getItem("nameShow"),
+    JSON.stringify(contacts)
+  );
 }
 
 // function updateContact(name, edit) {

@@ -49,7 +49,6 @@ function response(request) {
           return "ERROR";
         } else {
           let id = Number(arr[0]);
-          console.log(id);
           deleteContact(id + 1);
         }
       } else {

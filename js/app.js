@@ -52,9 +52,9 @@ function buildApp() {
         td.innerHTML = values[j];
         tr.appendChild(td);
       }
-      const thButton = document.createElement("td");
-      thButton.appendChild(deleteButton);
-      tr.appendChild(thButton);
+      const tdButton = document.createElement("td");
+      tdButton.appendChild(deleteButton);
+      tr.appendChild(tdButton);
       table.appendChild(tr);
     }
   }

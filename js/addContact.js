@@ -13,20 +13,29 @@ function addContact() {
 
     if (firstname === "" || lastname === "" || email === "" || phone === "") {
       alert("please fill everything");
-    } else {
-      const contact = {
-        firstname: firstname,
-        lastname: lastname,
-        email: email,
-        phone: phone,
-      };
-      const fajax = new Fajax();
-      fajax.onload(function (m) {
-        console.log(m);
-      });
-      fajax.open("POST", "contacts");
-      fajax.send(contact);
-      navigate("app");
+      return;
     }
+    if (
+      firstname.length < 3 ||
+      firstname.length > 20 ||
+      lastname.length < 3 ||
+      lastname.length > 20 ||
+      phone.length != 10
+    ) {
+      alert("Something is worng");
+    }
+    const contact = {
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      phone: phone,
+    };
+    const fajax = new Fajax();
+    fajax.onload(function (m) {
+      console.log(m);
+    });
+    fajax.open("POST", "contacts");
+    fajax.send(contact);
+    navigate("app");
   }
 }

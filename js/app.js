@@ -8,16 +8,16 @@ function buildApp() {
   const logout = document.getElementById("logoutid");
   add.addEventListener("click", function () {
     navigate("addContact");
- });
-logout.addEventListener("click", function(){
-  sessionStorage.clear();
-  nameShow.innerHTML =("");
+  });
+  logout.addEventListener("click", function () {
+    sessionStorage.clear();
+    nameShow.innerHTML = "";
     navigate("login");
-});
+  });
 
   function createTable() {
     table.innerHTML = "";
-    const arr1 = ["Name", "Family Name", "Email", "Phone Number"];
+    const arr1 = ["Name", "Family Name", "Email", "Phone Number", ""];
     const tr = document.createElement("tr");
     for (let i = 0; i < arr1.length; i++) {
       const th = document.createElement("th");
@@ -38,24 +38,41 @@ logout.addEventListener("click", function(){
   function addContacts(contactsArray) {
     const contacts = JSON.parse(contactsArray);
     for (let i = 0; i < contacts.length; i++) {
-      console.log(contacts);
       const tr = document.createElement("tr");
-      console.log(contacts[i]);
       const values = Object.values(contacts[i]);
+      const deleteButton = document.createElement("button");
+      deleteButton.id = i;
+      deleteButton.className = "deleteButton";
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", function () {
+        deleteFromContacts(this.id);
+      });
       for (let j = 0; j < values.length; j++) {
         const th = document.createElement("th");
         th.innerHTML = values[j];
         tr.appendChild(th);
       }
+      const thButton = document.createElement("th");
+      thButton.appendChild(deleteButton);
+      tr.appendChild(thButton);
       table.appendChild(tr);
     }
   }
 
-  // const fajax = new Fajax();
-  // fajax.onload(function (m) {
-  //   console.log(m);
-  //   // console.log(JSON.parse(m));
-  // });
-  // fajax.open("GET", "contacts");
-  // fajax.send();
+  function deleteFromContacts(deleteButtonId) {
+    const fajax = new Fajax();
+    fajax.onload(function () {
+      createTable();
+    });
+    fajax.open("DELETE", "contacts/" + deleteButtonId);
+    fajax.send();
+  }
 }
+
+// const fajax = new Fajax();
+// fajax.onload(function (m) {
+//   console.log(m);
+//   // console.log(JSON.parse(m));
+// });
+// fajax.open("GET", "contacts");
+// fajax.send();

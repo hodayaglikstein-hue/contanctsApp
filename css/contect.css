@@ -1,8 +1,9 @@
-#content.app {
+#content.app,
+#content.addContact {
   width: 100vw;
 }
 #content.app .navbar,
-#content.navbar .navbar {
+#content.addContact .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,16 +13,17 @@
 }
 
 #content.app #imgpeople,
-#content.navbar #imgpeople {
+#content.addContact #imgpeople {
   order: 1;
 }
 
 #content.app #title,
-#content.navbar #title {
+#content.addContact #title1 {
   order: 2;
   font-weight: 300;
 }
-#content.app #click {
+#content.app #click,
+#content.addContact #click {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -33,7 +35,7 @@
   padding: 15px;
 }
 #content.app .logout,
-#content.navbar .logout {
+#content.addContact #logouti {
   order: 4;
   /* position: absolute; */
   /* left: 50%;
@@ -43,7 +45,7 @@
 }
 
 #content.app #name,
-#content.navbar #name {
+#content.addContact #name {
   order: 5;
   margin-left: auto;
   font-weight: 500;

@@ -117,17 +117,16 @@
       <template id="addContact">
         <nav class="navbar">
           <img id="imgpeople" width="50px" src="https://www.gstatic.com/images/branding/product/1x/contacts_2022_48dp.png" /></a>
-          <h1 id="title">Contacts</h1>
+          <h1 id="title1">Contacts</h1>
           <div id="click">
-          <button class="logout">logout</button>
+          <button id="logouti">logout</button>
           </div>
-          
             <P id="name"></P>
            </div>
         </nav>
-        <h1>Add a new contact</h1>
-        <form>
-            <label for="firstname">First Name:</label>
+        <form class="form">
+           <div id="formf">
+              <label for="firstname">First Name:</label>
             <input 
             type="text" 
             name="firstname" 
@@ -163,7 +162,9 @@
             >
             <button id="addNew" type="button">add contact</button>
 
-        </form>
+           </div>
+            
+        </form> 
       </template>
     </main>
     <script src="./js/spa.js"></script>

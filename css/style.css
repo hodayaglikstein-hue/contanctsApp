@@ -17,14 +17,25 @@
   font-size: 25px;
 }
 
-#content.enter #title {
+#content.addContact .form {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+}
+
+#content.enter #title,
+#content.addContact #title {
   font-weight: bold;
   font-size: 35px;
   text-align: center;
   margin-bottom: 30px;
 }
 
-#content.enter .form {
+#content.enter .form,
+#content.addContact #formf {
   background: white;
   padding: 30px;
   display: flex;
@@ -35,24 +46,34 @@
 }
 
 #content.enter .form-part {
+  /* ,#content.addContact .form-part { */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
 }
+#content.addContact .form-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  order: 1;
+}
 
-#content.enter.form-part label {
-  /* font-weight: bold; */
+#content.enter.form-part label,
+#content.addContact.form-part label {
   font-size: 25px;
 }
 
-#content.enter input {
+#content.enter input,
+#content.addContact input {
   padding: 5px;
   font-size: 25px;
   font-weight: 500;
 }
 
-#content.enter #submit {
+#content.enter #submit,
+#content.addContact #addNew {
   background-color: rgb(186, 244, 240);
   padding: 5px;
   margin: 5px;
@@ -92,6 +113,6 @@
 }
 
 img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }

@@ -7,6 +7,12 @@ function buildApp() {
   const add = document.getElementById("add");
   add.addEventListener("click", function () {
     navigate("addContact");
+  logout.addEventListener("click", function(){
+    sessionStorage.clear();
+    nameShow.innerHTML =("");
+
+    navigate("logout");
+  })
   });
 
   function createTable() {

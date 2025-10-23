@@ -1,7 +1,8 @@
 #content.app {
   width: 100vw;
 }
-#content.app .navbar {
+#content.app .navbar,
+#content.navbar .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,11 +11,13 @@
   padding: 10px 10px;
 }
 
-#content.app #imgpeople {
+#content.app #imgpeople,
+#content.navbar #imgpeople {
   order: 1;
 }
 
-#content.app #title {
+#content.app #title,
+#content.navbar #title {
   order: 2;
   font-weight: 300;
 }
@@ -29,7 +32,8 @@
   background-color: rgb(189, 255, 189);
   padding: 15px;
 }
-#content.app .logout {
+#content.app .logout,
+#content.navbar .logout {
   order: 4;
   /* position: absolute; */
   /* left: 50%;
@@ -38,7 +42,8 @@
   padding: 15px;
 }
 
-#content.app #name {
+#content.app #name,
+#content.navbar #name {
   order: 5;
   margin-left: auto;
   font-weight: 500;

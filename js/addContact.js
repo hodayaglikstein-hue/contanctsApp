@@ -37,7 +37,7 @@ function addContact() {
       alert("Something is worng");
       return;
     }
-    if (!regex.test(firstname) || !regex.test(lastname)) {
+    if (!regex2.test(firstname) || !regex2.test(lastname)) {
       alert("The firstname and lastname can only contain letters ");
       return;
     } else {

@@ -28,11 +28,13 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 10px;
+  font-size: 20px;
 }
 #content.app #add {
   order: 3;
   background-color: rgb(189, 255, 189);
   padding: 15px;
+  font-size: 20px;
 }
 #content.app .logout,
 #content.addContact #logouti {
@@ -42,6 +44,7 @@
   transform: translateX(-50%); */
   background-color: rgb(189, 255, 189);
   padding: 15px;
+  font-size: 20px;
 }
 
 #content.app #name,
